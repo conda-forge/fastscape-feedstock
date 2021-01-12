@@ -1,5 +1,5 @@
 {% set name = "fastscape" %}
-{% set version = "0.1.0beta" %}
+{% set version = "0.1.0beta3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/fastscape-lem/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: b08ba7ebd3693681db0832b193f21846e187b9bfdbe9a60f921a0f139e11c2c3
+  sha256: 5988e4963bedf2bd1fb956057f6444537351715bbfbde4c0a1cd29f5eca1bdf6
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
   run:
     - python >=3
     - xarray-simlab >=0.4.0
-    - fastscapelib-f2py >=2.8.1
+    - fastscapelib-f2py >=2.8.2
     - numba
 
 test:
