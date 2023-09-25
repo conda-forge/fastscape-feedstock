@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/fastscape-lem/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 5aaafb3b1d7726b10f0d3809f6e21f9a90913d1f95f62b1d0c5a055830277d19
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fastscape-{{ version }}.tar.gz
+  sha256: 8ccc43f19aa13997588818bd017647aebd9c7015e76dd02348ab25dc3527560e
 
 build:
   number: 0
