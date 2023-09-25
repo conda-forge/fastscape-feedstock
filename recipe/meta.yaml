@@ -1,27 +1,29 @@
 {% set name = "fastscape" %}
-{% set version = "0.1.0beta3" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/fastscape-lem/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 5988e4963bedf2bd1fb956057f6444537351715bbfbde4c0a1cd29f5eca1bdf6
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fastscape-{{ version }}.tar.gz
+  sha256: 8ccc43f19aa13997588818bd017647aebd9c7015e76dd02348ab25dc3527560e
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - python >=3
+    - setuptools >=42
+    - setuptools-scm >=7
     - pip
   run:
     - python >=3
-    - xarray-simlab >=0.4.0
-    - fastscapelib-f2py >=2.8.2
+    - xarray-simlab >=0.5.0
+    - fastscapelib-f2py >=2.8.3
     - numba
 
 test:
